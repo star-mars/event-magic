@@ -1,0 +1,8 @@
+[build]
+  base = "Snoball"
+  publish = "Snoball"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
