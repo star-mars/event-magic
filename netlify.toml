@@ -1,6 +1,6 @@
 [build]
-  base = "Snoball"
-  publish = "Snoball"
+  base = "event"
+  publish = "event"
 
 [[redirects]]
   from = "/*"
