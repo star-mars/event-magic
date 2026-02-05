@@ -1,0 +1,592 @@
+/* ===========================================
+   Premagic vs InGo – Page-Specific Styles
+   Supplements ../styles.css (base design system)
+   =========================================== */
+
+/* ── InGo coverage bar (lifecycle section) ── */
+.coverage-bar.ingo {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+}
+
+/* ── Visual Comparison (side-by-side) Sections ── */
+.vs-section {
+    padding: var(--section-padding) 0;
+}
+
+.vs-section h2 {
+    margin-bottom: 12px;
+}
+
+.vs-tagline {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin-bottom: 48px;
+}
+
+.vs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.vs-card {
+    padding: 36px;
+    border-radius: var(--card-radius);
+}
+
+.vs-card.premagic-side {
+    background: var(--white);
+    border: 2px solid #10b981;
+    box-shadow: var(--shadow-md);
+}
+
+.vs-card.competitor-side {
+    background: var(--gray-100);
+    border: 2px solid var(--gray-200);
+}
+
+.vs-brand {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.vs-brand.premagic {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.vs-brand.ingo {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.vs-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.vs-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.vs-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vs-card ul li {
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    color: var(--text-medium);
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 0.95rem;
+}
+
+.vs-card ul li:last-child {
+    border-bottom: none;
+}
+
+.vs-card.premagic-side ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 16px;
+    height: 16px;
+    background: #10b981;
+    border-radius: 50%;
+}
+
+.vs-card.premagic-side ul li::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 17px;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.vs-card.competitor-side ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 16px;
+    height: 16px;
+    background: #ef4444;
+    border-radius: 50%;
+}
+
+.vs-card.competitor-side ul li::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 18px;
+    width: 2px;
+    height: 8px;
+    background: white;
+}
+
+.vs-stat-banner {
+    background: var(--bg-light-blue);
+    border: 1px solid rgba(43, 75, 195, 0.15);
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.vs-stat-banner p {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-deep-blue);
+}
+
+.vs-stat-banner span {
+    color: var(--primary-coral);
+    font-weight: 800;
+}
+
+/* ── Approach Philosophy Section ── */
+.approach-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.approach-card {
+    padding: 40px;
+    border-radius: var(--card-radius);
+    position: relative;
+}
+
+.approach-card.full-lifecycle {
+    background: linear-gradient(135deg, #1f0f61 0%, #2b4bc3 100%);
+    color: var(--white);
+}
+
+.approach-card.full-lifecycle h3,
+.approach-card.full-lifecycle p {
+    color: var(--white);
+}
+
+.approach-card.point-solution {
+    background: var(--gray-100);
+    border: 2px solid var(--gray-200);
+}
+
+.approach-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.approach-label.premagic {
+    background: rgba(255, 101, 80, 0.2);
+    color: var(--primary-coral);
+}
+
+.approach-label.ingo {
+    background: var(--gray-200);
+    color: var(--text-light);
+}
+
+.approach-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.approach-card .approach-list {
+    list-style: none;
+    padding: 0;
+}
+
+.approach-card .approach-list li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.approach-card.full-lifecycle .approach-list li {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.approach-card .approach-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-coral);
+    font-weight: 700;
+}
+
+.approach-card.point-solution .approach-list li {
+    color: var(--text-medium);
+}
+
+.approach-card.point-solution .approach-list li::before {
+    color: var(--text-light);
+}
+
+/* ── Awards / Recognition ── */
+.awards-section {
+    background: var(--primary-deep-blue);
+    padding: var(--section-padding) 0;
+    text-align: center;
+}
+
+.awards-section h2 {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.awards-section .section-intro {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.awards-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.award-item {
+    text-align: center;
+}
+
+.award-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    color: var(--primary-coral);
+}
+
+.award-item h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.award-item p {
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+.g2-badges {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.g2-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px 28px;
+    text-align: center;
+    min-width: 140px;
+}
+
+.g2-badge .g2-season {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.g2-badge .g2-title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.g2-badge .g2-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 2px;
+}
+
+/* ── Community Trust Section ── */
+.trust-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.trust-card {
+    padding: 36px;
+    border-radius: var(--card-radius);
+    text-align: center;
+}
+
+.trust-card.strong {
+    background: #ecfdf5;
+    border: 2px solid #10b981;
+}
+
+.trust-card.weak {
+    background: var(--gray-100);
+    border: 2px solid var(--gray-200);
+}
+
+.trust-number {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.trust-card.strong .trust-number {
+    color: #059669;
+}
+
+.trust-card.weak .trust-number {
+    color: var(--text-light);
+}
+
+.trust-label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* ── ROI Calculator Section ── */
+.roi-section {
+    padding: var(--section-padding) 0;
+    background: linear-gradient(180deg, var(--gray-100) 0%, var(--white) 100%);
+}
+
+.roi-section h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.roi-section .section-intro {
+    text-align: center;
+    margin: 0 auto 48px;
+}
+
+#roi-calculator {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* ── Big Number Stats ── */
+.big-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 48px 0;
+}
+
+.big-stat {
+    text-align: center;
+    padding: 32px;
+    background: var(--white);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.big-stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-coral);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.big-stat-label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* ── User Review Cards ── */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.review-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.review-card::before {
+    content: '"';
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary-coral);
+    opacity: 0.15;
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    line-height: 1;
+}
+
+.review-card blockquote {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    padding: 0;
+    border: none;
+}
+
+.review-card cite {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-style: normal;
+}
+
+.review-source {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.review-source.premagic-review {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.review-source.ingo-review {
+    background: #fef3cd;
+    color: #856404;
+}
+
+/* ── Pricing Comparison Callout ── */
+.pricing-callout {
+    background: linear-gradient(135deg, #fff5f4 0%, #ffffff 50%, #f1f4ff 100%);
+    border: 2px solid var(--primary-coral);
+    border-radius: var(--card-radius);
+    padding: 40px;
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.pricing-callout h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.pricing-callout p {
+    font-size: 1rem;
+}
+
+.pricing-ingo {
+    text-align: center;
+    padding: 24px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.pricing-ingo .price-tag {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ef4444;
+    margin-bottom: 4px;
+}
+
+.pricing-ingo .price-detail {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/* ── Feature cards inside gradient sections ── */
+.section-gradient .feature-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ── Responsive Overrides ── */
+@media (max-width: 768px) {
+    .vs-grid,
+    .approach-cards,
+    .trust-comparison,
+    .pricing-callout {
+        grid-template-columns: 1fr;
+    }
+
+    .awards-grid {
+        gap: 24px;
+    }
+
+    .g2-badges {
+        gap: 16px;
+    }
+
+    .big-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .vs-card,
+    .approach-card {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .g2-badge {
+        min-width: 120px;
+        padding: 16px 20px;
+    }
+}
